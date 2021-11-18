@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<link rel="stylesheet" href="static/styles.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<div align="center">
+<h2>User Profile Check Tool</h2>
+    <form method="POST">
+        <input type="text" name="user_pin" placeholder="user_pin,default=demo">
+        <input type="submit" value="submit">
+    </form>
+    <table class="info">
+	<tr>
+	    <th align="center" width="5%">result</th>
+	    <th align="center" width="10%">message</th>
+	    <th align="center" width="10%">code</th>
+            <th align="center" width="75%">data</th>
+        </tr>
+        {% for i in content %}
+            <tr>
+                <td>{{ i.name }}</td>
+                <td>{{ i.type }}</td>
+                <td>{{ i.price }}</td>
+                <td>{{ i.data }}</td>
+            </tr>
+    	{% endfor %}
+    </table>
+</div>
+
+</body>
+</html>
